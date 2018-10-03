@@ -22,6 +22,7 @@ public class NonFoodProduct extends Product {
     
     //Metoder
     
+    @Override
     public String toString() {
         return "Navn: " + getNavn() + "\nMaterialeliste: " + getMaterialeListe();
     }

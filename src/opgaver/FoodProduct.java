@@ -20,6 +20,7 @@ public class FoodProduct extends Product {
         this.temperatur = temperatur;
     }
     
+    @Override
     public String toString() {
         return getNavn() + " udløber " + udløb.toString();
     }
