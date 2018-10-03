@@ -27,7 +27,7 @@ public class ProductDatabase {
     
     public void removeProduct(int vareNummer) {
         for (int i = 0; i<productDatabase.length; i++) {
-            if (productDatabase[i].getVareNummer() == vareNummer) {
+            if (productDatabase[i] != null && productDatabase[i].getVareNummer() == vareNummer) {
                 productDatabase[i] = null;
             }
         }
