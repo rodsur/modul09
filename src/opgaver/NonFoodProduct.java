@@ -22,6 +22,10 @@ public class NonFoodProduct extends Product {
     
     //Metoder
     
+    public String toString() {
+        return "Navn: " + getNavn() + "\nMaterialeliste: " + getMaterialeListe();
+    }
+    
     //Setters Getters
 
     public String getMaterialeListe() {

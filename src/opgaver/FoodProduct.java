@@ -20,4 +20,8 @@ public class FoodProduct extends Product {
         this.temperatur = temperatur;
     }
     
+    public String toString() {
+        return getNavn() + " udløber " + udløb.toString();
+    }
+    
 }
