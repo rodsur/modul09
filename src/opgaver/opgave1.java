@@ -18,15 +18,19 @@ public class opgave1 {
         
         ProductDatabase database = new ProductDatabase();
         
-        Product product1 = new Product(02, "gris", 20.0);
+        Product product1 = new Product(01, "gris", 20.0);
         Product product2 = new Product(02, "hest", 10.0);
-        Product product3 = new Product(02, "ko", 15.0);
+        Product product3 = new Product(03, "ko", 15.0);
         
         database.addProduct(product1);
         database.addProduct(product2);
         database.addProduct(product3);
         
         database.makeList();
+        System.out.println("varene koster samlet: " + database.returnSum());
+        database.removeProduct(2);
+        database.makeList();
+        System.out.println("varene koster samlet: " + database.returnSum());
     }
     
 }

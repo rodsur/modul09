@@ -25,9 +25,20 @@ public class ProductDatabase {
         productDatabase[productDatabase.length-1] = product;
     }
     
+    public void removeProduct(int vareNummer) {
+        for (int i = 0; i<productDatabase.length; i++) {
+            if (productDatabase[i].getVareNummer() == vareNummer) {
+                productDatabase[i] = null;
+            }
+        }
+    }
+    
     public void makeList() {
         for(int i = 0; i<productDatabase.length;i++) {
-            System.out.println(productDatabase[i].getNavn());
+            if (productDatabase[i] != null) {
+                System.out.println(productDatabase[i].getNavn());
+            }
+            
         }
     }
     
@@ -38,6 +49,16 @@ public class ProductDatabase {
             newDatabase[i] = productDatabase[i];
         }
         productDatabase = newDatabase;
+    }
+    
+    public double returnSum() {
+        double sum = 0;
+        for (int i = 0; i<productDatabase.length; i++) {
+            if (productDatabase[i] != null) {
+                sum += productDatabase[i].getPris();
+            }
+        }
+        return sum;
     }
     
     //Getters Setters
